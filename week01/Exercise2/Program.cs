@@ -57,7 +57,7 @@ class Program
         {
 
 
-            // B, C y D
+            // B, C and D
             if (lastDigit >= 7)
             {
                 sign = "+";
