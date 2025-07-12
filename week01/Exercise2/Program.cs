@@ -56,7 +56,6 @@ class Program
         else
         {
 
-
             // B, C and D
             if (lastDigit >= 7)
             {
