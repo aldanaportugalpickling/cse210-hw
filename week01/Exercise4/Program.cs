@@ -36,7 +36,7 @@ class Program
         float average = ((float)sum) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
 
-        //Find the maximun or largest number in the list.
+        //Find the maximum or largest number in the list.
 
         int max = numbers[0];
 
