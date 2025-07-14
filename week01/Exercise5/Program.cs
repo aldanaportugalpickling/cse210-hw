@@ -11,11 +11,12 @@ class Program
 
         DisplayMessage();
         string name = PromptUserName();
-        int number = PromptFavoriteNumber();
-        DisplayResult(name, number);
+        int number = PromptUserNumber();
+        int squaredNumber = SquareNumber(number);
+
+        DisplayResult(name, squaredNumber);
 
     }
-
 
     static void DisplayMessage()
     {
@@ -27,10 +28,9 @@ class Program
         Console.WriteLine("Please enter your name:  ");
         string name = Console.ReadLine();
         return name;
-        
     }
 
-    static int PromptFavoriteNumber()
+    static int PromptUserNumber()
     {
         Console.WriteLine("Please enter your favorite number:  ");
         string text = Console.ReadLine();
@@ -38,9 +38,15 @@ class Program
         return number;
     }
 
-    static void DisplayResult(string name, int number)
+    static int SquareNumber(int number)
     {
         int square = number * number;
-        Console.WriteLine($"{name}, the square of your name is {square}");
+        return square;
     }
+    
+    static void DisplayResult(string name, int number)
+    {
+        Console.WriteLine($"{name}, the square of your name is {number}");
+    }
+
 }
