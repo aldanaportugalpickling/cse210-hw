@@ -21,7 +21,6 @@ class Program
             }
         }
 
-
         //Execute the sum:
         int sum = 0;
 
@@ -51,8 +50,8 @@ class Program
 
         Console.WriteLine($"The largest number is: {max}");
 
-        //Find the minimun positive number: 
-        //Optional.
+        //Find the minimum positive number: 
+        //Optional
         int minPositive = int.MaxValue;
 
         foreach (int number in numbers)
