@@ -1,57 +1,46 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection;
+using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
 
+        DisplayMessage();
+        string name = PromptUserName();
+        int number = PromptFavoriteNumber();
+        DisplayResult(name, number);
 
-        List<int> numbers = new List<int>();
-
-        int userNumber = -1;
-
-        while (userNumber != 0)
-        {
-            Console.Write("Enter a number (0 to quit): ");
-
-            string userResponse = Console.ReadLine();
-            userNumber = int.Parse(userResponse);
-            if (userNumber != 0)
-            {
-                numbers.Add(userNumber);
-            }
-        }
+    }
 
 
+    static void DisplayMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+    }
 
+    static string PromptUserName()
+    {
+        Console.WriteLine("Please enter your name:  ");
+        string name = Console.ReadLine();
+        return name;
+        
+    }
 
-        //Execute the sum:
-        int sum = 0;
-        foreach (int number in numbers)
-        {
-            sum += number;
-        }
+    static int PromptFavoriteNumber()
+    {
+        Console.WriteLine("Please enter your favorite number:  ");
+        string text = Console.ReadLine();
+        int number = int.Parse(text);
+        return number;
+    }
 
-        Console.WriteLine($"The sum is: {sum}");
-
-        //The average of the numbers in the list:
-        float average = ((float)sum) / numbers.Count;
-        Console.WriteLine($"The average is: {average}");
-
-        //Find the maximun or largest number in the list.
-        int max = numbers[0];
-
-        foreach (int number in numbers)
-        {
-            if (number > max)
-            {
-                // if this number is greater than the max, we have found the new max!
-                max = number;
-            }
-        }
-
-        Console.WriteLine($"The max is: {max}");
-
-
+    static void DisplayResult(string name, int number)
+    {
+        int square = number * number;
+        Console.WriteLine($"{name}, the square of your name is {square}");
     }
 }
