@@ -48,9 +48,8 @@ class Program
                 sign = "";
             }
         }
-        else if (letter == "F")
+        else if (letter == "F")  // F whitout sign
         {
-            // F whitout sign
             sign = "";
         }
         else
@@ -80,7 +79,7 @@ class Program
         }
         else
         {
-            Console.WriteLine($"Your grade percentaje is {letter}. You did not pass, push yourself just a bit more next time, you've got this!");
+            Console.WriteLine($"Your grade percentage is {letter}. You did not pass, push yourself just a bit more next time, you've got this!");
         }
             
     }
