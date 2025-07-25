@@ -67,6 +67,7 @@ public class Journal
     {
         using (StreamWriter writer = new StreamWriter(filename))
         {
+            writer.WriteLine("Date,Prompt,Entry,Mood");
             foreach (Entry entry in _entries)
             {
                 string line = $"\"{entry._date}\",\"{entry._promptText}\",\"{entry._entryText}\",\"{entry._mood}\"";

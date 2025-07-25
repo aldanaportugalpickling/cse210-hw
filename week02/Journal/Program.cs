@@ -18,6 +18,7 @@ class Program
             Console.WriteLine("Welcome to the Journal Program!");
             Console.WriteLine("Please select one of the following choices.");
             Console.WriteLine("------------------------------------------");
+            Console.WriteLine("1. Write a new entry");
             Console.WriteLine("2. Display the journal");
             Console.WriteLine("3. Save journal to TXT file");
             Console.WriteLine("4. Load journal from TXT file");
