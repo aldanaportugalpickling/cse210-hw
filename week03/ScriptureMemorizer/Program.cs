@@ -1,5 +1,8 @@
 using System;
-
+// This program meets the basic requirements and also demonstrates creativity to go beyond them:
+// I added a list of multiple scriptures and one is randomly selected each time the program runs.
+// I used logic to hide only the words that are still visible, instead of hiding already hidden words again.
+// The program supports scriptures with either a single verse or multiple verses using overloaded constructors in the Reference class.
 class Program
 {
     static void Main(string[] args)
