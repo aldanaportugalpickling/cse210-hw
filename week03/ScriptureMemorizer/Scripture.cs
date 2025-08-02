@@ -27,7 +27,7 @@ public class Scripture
         {
             int index = random.Next(visibleWords.Count);
             visibleWords[index].Hide();
-            visibleWords.RemoveAt(index); // Evita ocultar la misma palabra otra vez
+            visibleWords.RemoveAt(index); 
         }
     }
 
