@@ -31,7 +31,7 @@ class Program
                 break;
             }
 
-            scripture.HideRandomWords(3);
+            scripture.HideRandomWords(1);
 
             if (scripture.IsCompletelyHidden())
             {
