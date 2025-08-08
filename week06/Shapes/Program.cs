@@ -4,8 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
-
         // Notice that the list is a list of "Shape" objects. That means
         // you can put any Shape objects in there, and also, any object where
         // the class inherits from Shape
