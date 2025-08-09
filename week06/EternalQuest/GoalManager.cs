@@ -199,6 +199,7 @@ public class GoalManager
 
         Console.WriteLine("---------------------------------------------------------------------------------------");
         Console.WriteLine(GetRandomMotivationalMessage());
+        Console.WriteLine("---------------------------------------------------------------------------------------");
         Console.WriteLine();
     }
 
