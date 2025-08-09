@@ -3,11 +3,10 @@ public class ChecklistGoal : Goal
 {
     private int _amountCompleted;
     private int _target;
-    protected int _bonus;
-    private bool _bonusGiven; 
+    private bool _bonusGiven;
+    private int _bonus;
 
-
-    public bool BonusGiven 
+    public bool BonusGiven
     {
         get { return _bonusGiven; }
         set { _bonusGiven = value; }
@@ -30,7 +29,7 @@ public class ChecklistGoal : Goal
 
             if (_amountCompleted == _target && !_bonusGiven)
             {
-              
+
                 Console.WriteLine($"Congratulations! You have completed the checklist goal and earned a bonus of {_bonus} points!");
                 _bonusGiven = true;
             }
@@ -61,7 +60,7 @@ public class ChecklistGoal : Goal
         int target = int.Parse(parts[4]);
         int amountCompleted = int.Parse(parts[5]);
         bool bonusGiven = parts.Length > 6 && bool.Parse(parts[6]);
-       
+
 
         ChecklistGoal goal = new ChecklistGoal(name, description, points, target, bonus);
         goal._amountCompleted = amountCompleted;
@@ -69,9 +68,8 @@ public class ChecklistGoal : Goal
         return goal;
     }
 
-
-    public int GetBonus()
+    public int Bonus
     {
-        return _bonus;
+        get { return _bonus; }
     }
 }

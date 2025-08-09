@@ -189,7 +189,7 @@ public class GoalManager
 
         if (selectedGoal is ChecklistGoal checklistGoal && checklistGoal.IsComplete() && !checklistGoal.BonusGiven)
         {
-            earnedPoints += checklistGoal.GetBonus();
+            earnedPoints += checklistGoal.Bonus;
             checklistGoal.BonusGiven = true;
         }
 
@@ -197,7 +197,9 @@ public class GoalManager
         Console.WriteLine($"You earned {earnedPoints} points for: {selectedGoal.GetDetailsString()}");
         DisplayPlayerInfo();
 
+        Console.WriteLine("---------------------------------------------------------------------------------------");
         Console.WriteLine(GetRandomMotivationalMessage());
+        Console.WriteLine();
     }
 
     public void SaveGoals(string file)
