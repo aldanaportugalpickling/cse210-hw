@@ -15,6 +15,7 @@ public class GoalManager
         "Every step brings you closer to your goal.",
         "You are stronger than you think!",
         "Keep it up, you're doing great!"
+       
     };
 
     Random random = new Random();
@@ -196,9 +197,9 @@ public class GoalManager
         Console.WriteLine($"You earned {earnedPoints} points for: {selectedGoal.GetDetailsString()}");
         DisplayPlayerInfo();
 
-        Console.WriteLine("------------------------------------------------------------------------");
+        Console.WriteLine("---------------------------------------------------");
         Console.WriteLine(GetRandomMotivationalMessage());
-        Console.WriteLine("------------------------------------------------------------------------");
+        Console.WriteLine(" --------------------------------------------------");
         Console.WriteLine();
     }
 
