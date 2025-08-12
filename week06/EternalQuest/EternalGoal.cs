@@ -6,9 +6,11 @@ public class EternalGoal : Goal
 
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
+        Console.WriteLine();
         Console.WriteLine($"You have earned {_points} points for recording progress on this eternal goal.");
+        return _points;
     }
 
     public override bool IsComplete()

@@ -182,9 +182,7 @@ public class GoalManager
         }
 
         Goal selectedGoal = _goals[goalIndex - 1];
-        selectedGoal.RecordEvent();
-
-        int earnedPoints = selectedGoal.GetPoints();
+       int earnedPoints =  selectedGoal.RecordEvent();
 
 
         if (selectedGoal is ChecklistGoal checklistGoal && checklistGoal.IsComplete() && !checklistGoal.BonusGiven)
@@ -194,12 +192,13 @@ public class GoalManager
         }
 
         _score += earnedPoints;
+
         Console.WriteLine($"You earned {earnedPoints} points for: {selectedGoal.GetDetailsString()}");
         DisplayPlayerInfo();
 
-        Console.WriteLine("---------------------------------------------------------------------------------------");
+        Console.WriteLine("------------------------------------------------------------------------");
         Console.WriteLine(GetRandomMotivationalMessage());
-        Console.WriteLine("---------------------------------------------------------------------------------------");
+        Console.WriteLine("------------------------------------------------------------------------");
         Console.WriteLine();
     }
 

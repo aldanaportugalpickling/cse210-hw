@@ -20,8 +20,10 @@ public class ChecklistGoal : Goal
         _bonusGiven = false;
     }
 
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
+        int earnedPoints = _points;
+
         if (_amountCompleted < _target)
         {
             _amountCompleted++;
@@ -29,11 +31,14 @@ public class ChecklistGoal : Goal
 
             if (_amountCompleted == _target && !_bonusGiven)
             {
-
+                Console.WriteLine();
                 Console.WriteLine($"Congratulations! You have completed the checklist goal and earned a bonus of {_bonus} points!");
+                earnedPoints += _bonus;
                 _bonusGiven = true;
             }
         }
+
+        return earnedPoints;
     }
     public override bool IsComplete()
     {
