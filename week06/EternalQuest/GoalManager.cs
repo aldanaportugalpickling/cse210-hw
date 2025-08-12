@@ -185,13 +185,6 @@ public class GoalManager
         Goal selectedGoal = _goals[goalIndex - 1];
        int earnedPoints =  selectedGoal.RecordEvent();
 
-
-        if (selectedGoal is ChecklistGoal checklistGoal && checklistGoal.IsComplete() && !checklistGoal.BonusGiven)
-        {
-            earnedPoints += checklistGoal.Bonus;
-            checklistGoal.BonusGiven = true;
-        }
-
         _score += earnedPoints;
 
         Console.WriteLine($"You earned {earnedPoints} points for: {selectedGoal.GetDetailsString()}");
