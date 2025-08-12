@@ -190,9 +190,9 @@ public class GoalManager
         Console.WriteLine($"You earned {earnedPoints} points for: {selectedGoal.GetDetailsString()}");
         DisplayPlayerInfo();
 
-        Console.WriteLine("---------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------");
         Console.WriteLine(GetRandomMotivationalMessage());
-        Console.WriteLine(" --------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------");
         Console.WriteLine();
     }
 
