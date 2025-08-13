@@ -18,23 +18,16 @@ public abstract class Activity
         return _duration;
     }
 
-    public virtual double GetDistance()
-    {
-        return 0;
-    }
-    public virtual double GetSpeed()
-    {
-        return 0;
-    }
-
-    public virtual double GetPace()
-    {
-        return 0;
-    }
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
 
     public virtual string GetSummary()
     {
-        return $"{GetDate()} Swimming ({GetDuration()} Min) - Distance: {GetDistance():F2} km, Speed: {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
+        return $"{GetDate()} {this.GetType().Name.Replace("Activity", "")} " +
+              $"({GetDuration()} Min) - Distance: {GetDistance():F2} km, " +
+              $"Speed: {GetSpeed():F2} kph, " +
+              $"Pace: {GetPace():F2} min per km";
     }
 
 }

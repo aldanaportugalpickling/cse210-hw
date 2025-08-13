@@ -7,7 +7,10 @@ public class RunningActivity : Activity
         _distance = distance;
     }
 
-
+    public override double GetDistance()
+    {
+        return _distance;
+    }
     public override double GetSpeed()
     {
         double speed = (_distance / GetDuration()) * 60;
@@ -20,8 +23,4 @@ public class RunningActivity : Activity
         return pace;
     }
 
-    public override string GetSummary()
-    {
-        return $"{GetDate()} Running ({GetDuration()} Min) - Distance: {_distance} km, Speed: {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
-    }
 }
